@@ -1,1 +1,4 @@
-<p>Hello</p>
+<button (click)="getAllMovie()">Get Movie</button>
+
+<p  *ngFor="let character of list">{{character.genre}</p>
+<p style="color: red">{{errorMessage}}</p>
