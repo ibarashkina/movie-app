@@ -1,11 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-    <a routerLink="/watch-list" routerLinkActive="active">Watch List</a>
-</nav> -->
+<nav>
+    <div class="logoDiv">LOGO</div>
+    <div class="selectDiv">
+        <select class="genreSlct">
+            <option>Genre</option>
+        </select>
+        <select class="userRatingSlct">
+            <option>User Rating</option>
+        </select>
+        <select class="ratingSlct">
+            <option>Rating</option>
+        </select>
+    </div>
+    <div class="inputDiv">
+        <i class="material-icons">search</i>
+        <input class="searchInput" />
+    </div>
+    <div class="iconsDiv">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="material-icons">home</i></a>
+        <a routerLink="/watch-list" routerLinkActive="active"><i class="material-icons">favorite</i></a>
+        <i class="material-icons">account_circle</i>
+    </div>
+</nav>
 
 <router-outlet></router-outlet>
-<!-- 
-<movie-list></movie-list>
-<search-criteria></search-criteria>
-<watch-list-page></watch-list-page> -->

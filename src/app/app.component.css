@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    background-color: grey;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.material-icons {
+    color: white;
+    
+}
+
+
+.active {
+    color: green;
+}

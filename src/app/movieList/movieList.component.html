@@ -1,4 +1,12 @@
 <button (click)="getAllMovie()">Get Movie</button>
-
-<p *ngFor="let movie of list">{{ movie.title }}</p>
+<div class="moviesDiv">
+    <div class="movieDiv" *ngFor="let movie of list">
+        <i id="heartIcon"class="material-icons">favorite_border</i>
+        <div class="imageDiv">IMAGE</div>
+        <div class="textDiv">
+            <p class="movieTitle" >{{ movie.title }}</p>
+            <p class="voteAverage">{{movie.vote_average}}</p>
+        </div>
+    </div>
+</div>
 <p style="color: red">{{errorMessage}}</p>

@@ -1,0 +1,34 @@
+.moviesDiv {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    border: 1px solid blue;
+    width: 100%;
+
+}
+
+.movieDiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid darkgrey;
+    margin: 25px;
+    width: 250px;
+    height: 350px;
+    justify-content: center;
+    position: relative;
+}
+
+#heartIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.imageDiv {
+    border: solid 1px goldenrod;
+    height: 250px;
+}
+
+.textDiv {
+    padding-left: 15px;
+}
