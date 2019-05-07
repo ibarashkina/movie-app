@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 import { Logger } from './services/logger.service';
 
 const appRoutes: Routes = [
   {path: '', component: MovieListComponent },
   {path: 'search-criteria', component: SearchCriteriaComponent},
-  {path: 'watch-list-page', component: WatchListPageComponent}
+  {path: 'watch-list-page', component: WatchListPageComponent},
+  {path: 'movie-detail', component: MovieDetailComponent}
 ];
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ const appRoutes: Routes = [
     MovieListComponent,
     SearchCriteriaComponent,
     WatchListPageComponent,
+    MovieDetailComponent
     
   ],
   imports: [
