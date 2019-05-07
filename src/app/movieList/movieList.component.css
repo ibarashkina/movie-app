@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    border: 1px solid blue;
     width: 100%;
 
 }
@@ -10,12 +9,18 @@
 .movieDiv {
     display: flex;
     flex-direction: column;
-    border: 1px solid darkgrey;
-    margin: 25px;
-    width: 250px;
-    height: 350px;
+    margin: 10px 25px;
+    width: 388px;
+    height: 593px;
     justify-content: center;
     position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: black;        
+    border: solid 3px rgb(204, 199, 199);
+    font-size: 1.5rem;
+    border-radius: 3px;        
+    color: rgb(204, 199, 199);
+    
 }
 
 #heartIcon {
@@ -25,10 +30,22 @@
 }
 
 .imageDiv {
-    border: solid 1px goldenrod;
-    height: 250px;
+    border: solid 2px goldenrod;
+    margin: 5px;
+    height: 283px;
+    border-radius: 3px;
 }
 
 .textDiv {
     padding-left: 15px;
+}
+
+.movieTitle {
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 2rem;
+}
+
+.errorMsg {
+    color: red;
 }

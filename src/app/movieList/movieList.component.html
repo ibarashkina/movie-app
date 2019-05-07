@@ -4,9 +4,9 @@
         <i id="heartIcon"class="material-icons">favorite_border</i>
         <div class="imageDiv">IMAGE</div>
         <div class="textDiv">
-            <p class="movieTitle" >{{ movie.title }}</p>
-            <p class="voteAverage">{{movie.vote_average}}</p>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="movieTitle">{{ movie.title }}</a>
+            <p class="voteAverage"><i class="material-icons">star</i>{{movie.vote_average}}</p>
         </div>
     </div>
 </div>
-<p style="color: red">{{errorMessage}}</p>
+<p class="errorMsg">{{ errorMessage }}</p>
