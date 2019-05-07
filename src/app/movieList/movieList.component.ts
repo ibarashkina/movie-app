@@ -86,8 +86,9 @@ interface ApiData {
 })
 
 export class MovieListComponent {
-  list: object[];
+  list:Movies[];
   errorMessage:string;
+  imgUrl: string;
   constructor(private api: Api) {}
 
   getAllMovie = () => {
@@ -101,5 +102,7 @@ export class MovieListComponent {
     error =>{this.errorMessage = error.message;
     }
     );
+
 };
+
 }
