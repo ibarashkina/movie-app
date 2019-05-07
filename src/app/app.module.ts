@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { movieListComponent } from './movieList/movieList.component';
-import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
-import { watchListPageComponent } from './watchListPage/watchListPage.component';
+import { MovieListComponent } from './movieList/movieList.component';
+import { SearchCriteriaComponent } from './searchCriteria/searchCriteria.component';
+import { WatchListPageComponent } from './watchListPage/watchListPage.component';
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -11,16 +11,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { Logger } from './services/logger.service';
 
 const appRoutes: Routes = [
-  {path: '', component: movieListComponent },
-  {path: 'search-criteria', component: searchCriteriaComponent},
-  {path: 'watch-list-page', component: watchListPageComponent}
+  {path: '', component: MovieListComponent },
+  {path: 'search-criteria', component: SearchCriteriaComponent},
+  {path: 'watch-list-page', component: WatchListPageComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    movieListComponent,
-    searchCriteriaComponent,
-    watchListPageComponent,
+    MovieListComponent,
+    SearchCriteriaComponent,
+    WatchListPageComponent,
     
   ],
   imports: [
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ Logger ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,50 @@
+nav {
+    display: flex;
+    background-color: black;
+    border: solid 3px rgb(204, 199, 199);
+    border-radius: 3px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.logoDiv {
+    font-family: 'Gugi', cursive;
+    font-size: 3rem;
+    color: rgb(204, 199, 199);
+    padding: 10px;
+    border: solid 3px rgb(204, 199, 199);
+    border-radius: 3px;
+}
+
+input, select {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: black;
+    border: solid 3px rgb(204, 199, 199);
+    font-size: 1.5rem;
+    border-radius: 3px;
+    color: rgb(204, 199, 199);
+}
+
+select {
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.material-icons {
+    color: rgb(204, 199, 199);
+    font-size: 3rem;
+    padding-left: 15px;
+}
+
+.active {
+    color: green;
+}
+
+
+.inputDiv {
+    display: flex;
+    align-items: center;
+}
