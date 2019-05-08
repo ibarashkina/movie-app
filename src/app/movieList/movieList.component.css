@@ -1,0 +1,87 @@
+#fillerFrame{
+    height: 91px;
+    width: 100%;
+    /* background-color: limegreen; */
+}
+
+.moviesDiv {
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.movieDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 25px;
+    padding: 0;
+    width: 211px;
+    height: 400px;
+    justify-content: center;
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: black;        
+    /* border: solid 1px rgb(204, 199, 199); */
+    font-size: 1.5rem;
+    /* border-radius: 1px;         */
+    border: solid 1px goldenrod;
+
+    color: rgb(204, 199, 199);    
+}
+
+#heartIcon {
+    position: absolute;
+    top: 15.5em;
+    right: 5px;
+}
+
+.imageDiv {
+    position: absolute;
+    right:0;
+    left:0;
+    top: 0em;
+    margin: 5px;
+    height: 275px;
+    border-radius: 1px;
+}
+
+img {
+    shape-image-threshold: inherit;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13.5em;
+    padding-left: .25em;
+    line-height: 1.15em;
+}
+
+.movieTitle {
+    position: relative;
+    bottom: .85em;
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 1.2rem;
+}
+
+.voteAverage {    
+    position: absolute;
+    top: 14.35em;
+    left: 5px;
+    /* background-color: lime; */
+}
+#starIcon{
+    position: relative;
+    top: .12em;
+    font-size: 1em;
+    /* background-color: purple; */
+
+}
+.errorMsg {
+    color: red;
+}
