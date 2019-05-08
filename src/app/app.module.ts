@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MovieListComponent } from './movieList/movieList.component';
-import { SearchCriteriaComponent } from './searchCriteria/searchCriteria.component';
-import { WatchListPageComponent } from './watchListPage/watchListPage.component';
+import { movieListComponent } from './movieList/movieList.component';
+import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
+import { watchListPageComponent } from './watchListPage/watchListPage.component';
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,18 +13,19 @@ import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 import { Logger } from './services/logger.service';
 
 const appRoutes: Routes = [
-  {path: '', component: MovieListComponent },
-  {path: 'search-criteria', component: SearchCriteriaComponent},
-  {path: 'watch-list-page', component: WatchListPageComponent},
+  {path: '', component: movieListComponent },
+  {path: 'search-criteria', component: searchCriteriaComponent},
+  {path: 'watch-list-page', component: watchListPageComponent},
   {path: 'movie-detail', component: MovieDetailComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListComponent,
-    SearchCriteriaComponent,
-    WatchListPageComponent,
-    MovieDetailComponent
+    movieListComponent,
+    searchCriteriaComponent,
+    watchListPageComponent,
+    MovieDetailComponent,
+    HeaderComponent
     
   ],
   imports: [

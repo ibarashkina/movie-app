@@ -1,0 +1,70 @@
+.navbar-span {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    padding: 3% 3%;
+}
+
+.navbar-logo {
+    width: 20%; 
+    /* background-color: blueviolet;  */
+}
+
+.filter {
+    color:white;
+    background-color: black;
+    border: none;
+    height: 24px;
+}
+
+.filters-container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 500px;
+    /* margin-left: 7%; */
+    /* background-color: greenyellow; */
+}
+
+#userIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 33%;
+    height: 24px;
+    /* background-color: blue; */
+}
+
+#userIcons #ui {
+    background-color:black; 
+    border:none;
+}
+
+i {
+    color:white; 
+    font-size:20px;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.2s ease-out-in;
+    transition: width 0.2s ease-out-in;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
