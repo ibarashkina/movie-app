@@ -7,7 +7,7 @@
       <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"></div>
       <!-- <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"> -->
       <div class="textDiv">
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="movieTitle" (click)="resetPagination()">{{ movie.title }}</a>
+          <a routerLink="/movie-detail" class="movieTitle" >{{ movie.title }}</a>
       </div>
   </div>
 </div>
