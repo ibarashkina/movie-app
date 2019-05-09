@@ -13,7 +13,7 @@ import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 import { Logger } from './services/logger.service';
 
 const appRoutes: Routes = [
-  {path: '', component: movieListComponent },
+  {path: '', component: movieListComponent, pathMatch: 'full' },
   {path: 'search-criteria', component: searchCriteriaComponent},
   {path: 'watch-list-page', component: watchListPageComponent},
   {path: 'movie-detail', component: MovieDetailComponent}
