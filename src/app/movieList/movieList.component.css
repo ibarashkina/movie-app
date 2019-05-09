@@ -1,9 +1,3 @@
-#fillerFrame{
-    height: 80px;
-    width: 100%;
-    /* background-color: limegreen; */
-}
-
 .moviesDiv {
     display: flex;
     /* justify-content: flex-start; */

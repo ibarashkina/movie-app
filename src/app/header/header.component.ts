@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
+import { ActivatedRoute } from '@angular/router';
 import { Api } from '../services/api.service';
 
 @Component({
@@ -13,18 +12,17 @@ export class HeaderComponent implements OnInit {
   main: boolean = true;
   movie: any;
 
-  constructor(private router: ActivatedRoute, private api: Api) { }
+constructor(private router: ActivatedRoute, private api: Api, ) { }
+
+searchMovie = () => {
+  this.movie.searchMovie();  
+}
 
   ngOnInit() {
-    this.router.params.subscribe(() => {
-      // const id = params['movie'];
-      this.api.getMovie().subscribe(data => {
+        this.api.getMovie().subscribe(data => {
         this.movie = data;
         // console.log(data);
-
       });        
-
-    });
 }
 
   toggleSearchInput = () => {
