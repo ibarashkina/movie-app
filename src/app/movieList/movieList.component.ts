@@ -53,7 +53,5 @@ export class movieListComponent implements OnInit {
     });
   }
 
-  resetPagination() {
-    sessionStorage.setItem('hubmovies-current-page', '1');
-  }
+ 
 }
