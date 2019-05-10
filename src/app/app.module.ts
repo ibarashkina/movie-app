@@ -9,9 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieDetailComponent } from './movieDetail/movieDetail.component';
+// import { Logger } from './services/logger.service';
+import { MessageService } from './services/message.service';
+import { Api } from './services/api.service';
 
 const appRoutes: Routes = [
-  {path: '', component: movieListComponent },
+  {path: '', component: movieListComponent, pathMatch: 'full' },
   {path: 'search-criteria', component: searchCriteriaComponent},
   {path: 'watch-list-page', component: watchListPageComponent},
   {path: 'movie-detail', component: MovieDetailComponent}
@@ -32,7 +35,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [Api],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

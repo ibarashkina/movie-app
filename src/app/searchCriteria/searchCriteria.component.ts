@@ -1,13 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 import { Routes } from '@angular/router';
-// import { Api } from '../services/api.service';
-// import { HeaderComponent } from './header/header.component';
-// import { movieListComponent } from './movieList/movieList.component';
-
-// const routes: Routes = [
-//   { path: '', component: movieListComponent },
-//   { path: 'movie/:id', component: movieListComponent },
-// ];
+import { Api } from '../services/api.service';
 
 @Component({
   selector: 'search-criteria',
@@ -19,13 +12,8 @@ export class searchCriteriaComponent {
   movieString: string;
   search_result: any;
   movie: any;
+  
+  constructor(private api: Api){}
 
-
-  searchMovie = (movieString) => {
-    this.api.searchMovie(movieString).subscribe(data => {
-      this.search_result = data['results'];
-      console.log(this.search_result);
-    });
-  }
   
 }

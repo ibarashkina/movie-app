@@ -27,19 +27,16 @@
   </div>
   <form name="userIcons" id="userIcons">
                                                                         <!-- [(ngModel)]="searchTask" (input)='filter(searchTask)'-->
-    <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="movieString" (input)='searchMovie()' style="height:18px;"/></span>
+    <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="movieString" (change)='searchMovie()' style="height:18px;"/></span>
     <span *ngIf="!main"></span>
     <!-- <a href="{{ movie.homepage }}" target="_blank">
       Movie Homepage
     </a> -->
     <button id="ui" type="toggle" (click)="toggleSearchInput()"><i class="fa fa-search"></i></button>
-    <a id="ui" routerLink="/" target="_blank"><i class='fas fa-home'></i></a>
-    <!-- <a id="ui" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class='fas fa-home'></i></a> -->
+    <a id="ui" routerLink="/" ><i class='fas fa-home'></i></a>
 
-
-    <button id="ui"><i class='fas fa-heart'></i></button>
+    <button id="ui" routerLink='/watch-list-page'><i class='fas fa-heart'></i></button>
     <button id="ui"><i class='fas fa-user-alt'></i></button>
-
   </form>
   <form *ngIf="!main"></form>
  

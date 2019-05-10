@@ -6,17 +6,13 @@ import { Api } from '../services/api.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [Api]
 })
 export class HeaderComponent implements OnInit {
   main: boolean = true;
   movie: any;
-
+  movieString: string;
+  search_result: [];
 constructor(private router: ActivatedRoute, private api: Api, ) { }
-
-searchMovie = () => {
-  this.movie.searchMovie();  
-}
 
   ngOnInit() {
         this.api.getMovie().subscribe(data => {
@@ -28,4 +24,11 @@ searchMovie = () => {
   toggleSearchInput = () => {
     this.main = !this.main;
  };
+
+ searchMovie = () => {
+  this.api.searchMovie(this.movieString).subscribe((data: {results: []}) => {
+    console.log(data.results);
+    this.api.updateMovieList(data.results);
+  });
+}
 }
