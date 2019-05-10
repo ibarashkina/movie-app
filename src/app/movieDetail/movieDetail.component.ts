@@ -1,21 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { Api } from '../services/api.service';
 
 interface Movies {
-  poster_path: string;
-  adult: boolean;
-  overview: string;
-  release_date: string;
-  genre_ids: number[];
-  id: number;
-  original_title: string;
-  title: string;
   backdrop_path: string;
+  genres: {
+    id: number;
+    name: string
+  }[];
+  id: number;
+  overview: string;
   popularity: number;
+  poster_path: string;
+  release_date: string;
+  runtime: number;
+  title: string;
   vote_count: number;
-  video: boolean;
   vote_average: number;
 }
+
 
 interface ApiData {
   page: number;
@@ -31,19 +35,19 @@ interface ApiData {
   styleUrls: ['./movieDetail.component.css'],
 
 })
-export class MovieDetailComponent {
+export class MovieDetailComponent implements OnInit {
   list: Movies[];
+  movie: any;
 
-  constructor(private api: Api) {}
+  constructor(private api: Api, private route: ActivatedRoute) {}
   ngOnInit() {
-      
-    // this.api.getMovie().subscribe((data:ApiData) => {
-    //   this.movie = data; 
-    //   this.list = data.results;
-    //   console.log(data);
-    // });
-  
-}
+    this.route.params.subscribe(params => {
+      this.api.getMovieDetail(params.id).subscribe((data:ApiData) => {
+        this.movie = data; 
+      });
+  })
+
+    }
 
 
 }
