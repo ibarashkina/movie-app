@@ -1,0 +1,14 @@
+<p>search results</p>
+
+<div class="moviesDiv">
+        <div class="movieDiv" *ngFor="let movie of list">
+            <p class="voteAverage"><i id="starIcon" class="material-icons">star</i>{{movie.vote_average}}</p>
+            <i id="heartIcon"class="material-icons">favorite_border</i>
+            <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"></div>
+            <!-- <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"> -->
+            <div class="textDiv">
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="movieTitle" (click)="resetPagination()">{{ movie.title }}</a>
+            </div>
+        </div>
+      </div>
+      <p class="errorMsg">{{ errorMessage }}</p>

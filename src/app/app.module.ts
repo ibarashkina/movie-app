@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { movieListComponent } from './movieList/movieList.component';
 import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
 import { watchListPageComponent } from './watchListPage/watchListPage.component';
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
