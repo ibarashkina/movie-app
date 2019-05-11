@@ -21,10 +21,10 @@ interface Movies {
 }
 
 interface ApiData {
-  page: number;
+//   // page: number;
   results: Movies[];
-  total_results: number;
-  total_pages: number;
+//   // total_results: number;
+//   // total_pages: number;
 }
 
 @Component({
@@ -39,7 +39,7 @@ export class movieListComponent implements OnInit {
   movieId: number;
   
 
-  constructor(private router: ActivatedRoute, private api: Api) { }
+  constructor(private api: Api) { }
   
   ngOnInit() {
     this.api.movieList.subscribe(list => this.list = list);  
