@@ -59,32 +59,4 @@ getGenreMovies = () => {
     this.api.updateMovieList(data.results);
   });
 }
-
-// getTopRatedMovies = () => {
-//   this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
-//     console.log(data.results);
-//     this.api.updateMovieList(data.results);
-//   });
-// }
-
-// getTopRatedMovies = () => {
-//   this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
-//     console.log(data.results);
-//     this.api.updateMovieList(data.results);
-//   });
-// }
-
-// getTopRatedMovies = () => {
-//   this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
-//     console.log(data.results);
-//     this.api.updateMovieList(data.results);
-//   });
-// }
-
-// getTopRatedMovies = () => {
-//   this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
-//     console.log(data.results);
-//     this.api.updateMovieList(data.results);
-//   });
-// }
 }

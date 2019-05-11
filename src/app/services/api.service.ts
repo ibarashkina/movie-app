@@ -41,24 +41,5 @@ searchMovie = (moviestr) => {
     return this.http.get(genreApi);
   }
 
-  // // getTopRatedMovies() {
-  // //   const topRatedApi = `https://api.themoviedb.org/3/movie/top_rated?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&page=1`  
-  // //   return this.http.get(topRatedApi);
-  // }
-
-  // getTopRatedMovies() {
-  //   const topRatedApi = `https://api.themoviedb.org/3/movie/top_rated?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&page=1`  
-  //   return this.http.get(topRatedApi);
-  // }
-
-  // getTopRatedMovies() {
-  //   const topRatedApi = `https://api.themoviedb.org/3/movie/top_rated?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&page=1`  
-  //   return this.http.get(topRatedApi);
-  // }
-
-  // getTopRatedMovies() {
-  //   const topRatedApi = `https://api.themoviedb.org/3/movie/top_rated?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&page=1`  
-  //   return this.http.get(topRatedApi);
-  // }
 }
 
