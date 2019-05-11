@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 // import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
 import { Api } from '../services/api.service';
@@ -51,12 +51,11 @@ export class movieListComponent implements OnInit {
     
   }
 
-  // getId = item => {
-  //   const index = this.list.indexOf(item);
-  //   this.movieId = this.list[index].id;
-  //   console.log(this.movieId);
-  //   this.clicked.emit(this.movieId);
+  getId = item => {
+    const index = this.list.indexOf(item);
+    this.movieId = this.list[index].id;
+    console.log(this.movieId);
 
-  // }
+  }
  
 }
