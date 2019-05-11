@@ -10,14 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 // import { Logger } from './services/logger.service';
-import { MessageService } from './services/message.service';
 import { Api } from './services/api.service';
 
 const appRoutes: Routes = [
-  {path: '', component: movieListComponent, pathMatch: 'full' },
+  {path: 'home/:page', component: movieListComponent, pathMatch: 'full' },
   {path: 'search-criteria', component: searchCriteriaComponent},
   {path: 'watch-list-page', component: watchListPageComponent},
-  {path: 'movie-detail', component: MovieDetailComponent}
+  {path: 'movie-detail/:id', component: MovieDetailComponent},
+  {path: '', redirectTo: 'home/1', pathMatch: 'full' },
+  {path: '**', redirectTo: 'home/1'}
+
 ];
 @NgModule({
   declarations: [

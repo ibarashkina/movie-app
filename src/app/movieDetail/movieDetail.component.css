@@ -1,3 +1,56 @@
-p {
-    color: white;
+.mainDiv {
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: top;
+    margin-top: 100px;
+    
+    
 }
+
+.text {
+    color: #eeeeee;
+    margin: 15px;
+    width: 50%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.material-icons {
+margin-right: 5px;
+}
+
+#timer, #star, #theaters {
+    margin-left: 15px;
+}
+
+h1 {
+    font-family: 'Gugi', cursive;
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+.tagline {
+margin-top: 30px;    
+font-style: italic;
+
+}
+
+a {
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+.overview {
+    margin-bottom: 30px;
+}
+
