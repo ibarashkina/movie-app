@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   search_result: [];
 constructor(private router: ActivatedRoute, private api: Api, ) { }
 
-  ngOnInit() {
+ngOnInit() {
         this.api.getMovie().subscribe(data => {
         this.movie = data;
         // console.log(data);
@@ -25,8 +25,36 @@ constructor(private router: ActivatedRoute, private api: Api, ) { }
     this.main = !this.main;
  };
 
- searchMovie = () => {
+searchMovie = () => {
   this.api.searchMovie(this.movieString).subscribe((data: {results: []}) => {
+    console.log(data.results);
+    this.api.updateMovieList(data.results);
+  });
+}
+
+getTopRatedMovies = () => {
+  this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
+    console.log(data.results);
+    this.api.updateMovieList(data.results);
+  });
+}
+
+getNowPlayingMovies = () => {
+  this.api.getNowPlayingMovies().subscribe((data: {results: []}) => {
+    console.log(data.results);
+    this.api.updateMovieList(data.results);
+  });
+}
+
+getPopularMovies = () => {
+  this.api.getPopularMovies().subscribe((data: {results: []}) => {
+    console.log(data.results);
+    this.api.updateMovieList(data.results);
+  });
+}
+
+getGenreMovies = () => {
+  this.api.getGenreMovies().subscribe((data: {results: []}) => {
     console.log(data.results);
     this.api.updateMovieList(data.results);
   });

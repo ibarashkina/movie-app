@@ -21,10 +21,10 @@
     font-family: 'Roboto Condensed', sans-serif;
     background-color: black;        
     /* border: solid 1px rgb(204, 199, 199); */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     /* border-radius: 1px;         */
-    border: solid 1px goldenrod;
-
+    /* border: solid 1px goldenrod; */
+    box-shadow: 0 4px 8px 0 rgba(248, 247, 247, 0.2), 0 1px 5px 0 rgba(248, 247, 247, 0.2);
     color: rgb(204, 199, 199);    
 }
 
@@ -52,7 +52,7 @@ img {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 13.5em;
+    top: 16.7em;
     padding-left: .25em;
     line-height: 1.15em;
 }
@@ -62,12 +62,12 @@ img {
     bottom: .85em;
     text-decoration: none;
     color: #eeeeee;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 }
 
 .voteAverage {    
     position: absolute;
-    top: 14.35em;
+    top: 18.35em;
     left: 5px;
     /* background-color: lime; */
 }
