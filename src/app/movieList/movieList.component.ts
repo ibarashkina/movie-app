@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-// import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
 import { Api } from '../services/api.service';
 
 interface Movies {

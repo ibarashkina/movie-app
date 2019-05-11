@@ -31,4 +31,11 @@ constructor(private router: ActivatedRoute, private api: Api, ) { }
     this.api.updateMovieList(data.results);
   });
 }
+
+getTopRatedMovies = () => {
+  this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
+    console.log(data.results);
+    this.api.updateMovieList(data.results);
+  });
+}
 }

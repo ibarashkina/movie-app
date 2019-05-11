@@ -11,6 +11,7 @@ movieList = this._movieList.asObservable();
 
 updateMovieList = newList => this._movieList.next(newList);
 getMovie = () => this.http.get(this.apiUrl);
+
 searchMovie = (moviestr) => {
     if (!moviestr) {
         return this.getMovie();
@@ -18,6 +19,11 @@ searchMovie = (moviestr) => {
     const searchApi = `https://api.themoviedb.org/3/search/movie?query=${moviestr}&include_adult=false&page=1&language=en-US&api_key=ccf98653c165e83729605d20546c01d7`;
      return this.http.get(searchApi); 
   
+  }
+
+  getTopRatedMovies() {
+    const topRatedApi = `https://api.themoviedb.org/3/movie/top_rated?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&page=1`  
+    return this.http.get(topRatedApi);
   }
 }
 
