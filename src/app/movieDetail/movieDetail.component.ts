@@ -9,12 +9,14 @@ interface Movies {
     id: number;
     name: string
   }[];
+  homepage: string;
   id: number;
   overview: string;
   popularity: number;
   poster_path: string;
   release_date: string;
   runtime: number;
+  tagline: string;
   title: string;
   vote_count: number;
   vote_average: number;
