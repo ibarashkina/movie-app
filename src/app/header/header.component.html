@@ -4,8 +4,33 @@
   <div  class="filters-container">
   <div  class="nav-item">
       <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button>
+      <p><button id="ui" type="button" (click)="getNowPlayingMovies()">Now Playing</button></p>
+      <p><button id="ui" type="button" (click)="getPopularMovies()">Popular</button></p>
+      
+      <!-- <h1>Angular Get Selected Option Value</h1>
+      <h2><span>Select a day:</span></h2>
+      <select (change)="selectChangeHandler($event)">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+      </select>
+      <p><span>You selected: </span><b>{{selectedDay}}</b></p> -->
+
 
     <!-- <select id=filterValue class="filter" value="filterValue" >
+      <option selected disabled hidden>filter</option>
+      <option id="filter1"><button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button></option>
+      <option id="filter2">Option 2</option>
+      <option id="filter3">Option 3</option>
+    </select> -->
+  </div>
+  <div  class="nav-item">
+    <button id="ui" type="button" (click)="getGenreMovies()">Genre</button>
+    <!-- <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button> -->
+      
+    <!-- <select id=filterValue class="filter" value="filterValue">
       <option selected disabled hidden>filter</option>
       <option id="filter1">Option 1</option>
       <option id="filter2">Option 2</option>
@@ -13,19 +38,17 @@
     </select> -->
   </div>
   <div  class="nav-item">
-    <select id=filterValue class="filter" value="filterValue">
+    <!-- <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button> -->
+    <!-- <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button> -->
+    <!-- <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button> -->
+    
+      <!-- <select id=filterValue class="filter" value="filterValue">
       <option selected disabled hidden>filter</option>
       <option id="filter1">Option 1</option>
       <option id="filter2">Option 2</option>
       <option id="filter3">Option 3</option>
-    </select></div>
-  <div  class="nav-item">
-    <select id=filterValue class="filter" value="filterValue">
-      <option selected disabled hidden>filter</option>
-      <option id="filter1">Option 1</option>
-      <option id="filter2">Option 2</option>
-      <option id="filter3">Option 3</option>
-    </select></div>
+    <!-</select> -->
+  </div>
   </div>
   </div>
   <form name="userIcons" id="userIcons">
