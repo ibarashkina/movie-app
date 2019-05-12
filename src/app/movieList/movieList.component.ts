@@ -37,6 +37,8 @@ export class movieListComponent implements OnInit {
   movie: any;
   errorMessage:string;
   movieId: number;
+  favorite:boolean;
+  red:boolean=true;
   
 
   constructor(private router: ActivatedRoute, private api: Api) { }
@@ -48,9 +50,14 @@ export class movieListComponent implements OnInit {
         this.movie = data; 
         this.api.updateMovieList(data.results);
       });
-    
+   
   }
-
+  addWatchList= (movie) => {
+     this.red=!this.red;
+     movie.favorite=true;
+    //  const list.movies =[]
+     this.api.updateMovieList(this.list);
+   }
   // getId = item => {
   //   const index = this.list.indexOf(item);
   //   this.movieId = this.list[index].id;
@@ -58,5 +65,5 @@ export class movieListComponent implements OnInit {
   //   this.clicked.emit(this.movieId);
 
   // }
- 
+  
 }

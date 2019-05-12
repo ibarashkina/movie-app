@@ -1,3 +1,131 @@
 div {
     color: white;
 }
+
+.logo {
+    font-family: 'Gugi', cursive;
+        font-size: 3rem;
+        color: rgb(204, 199, 199);
+        padding: 10px;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1.5em;
+        margin-bottom:1.5em;
+    }
+
+    .moviesDiv {
+        display: flex;
+        /* justify-content: flex-start; */
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    
+    .movieDiv {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 25px;
+        padding: 0;
+        width: 211px;
+        height: 400px;
+        justify-content: center;
+        position: relative;
+        font-family: 'Roboto Condensed', sans-serif;
+        background-color: black;        
+        /* border: solid 1px rgb(204, 199, 199); */
+        font-size: 1.5rem;
+        /* border-radius: 1px;         */
+        border: solid 1px goldenrod;
+    
+        color: rgb(204, 199, 199);    
+    }
+    #heartIcon {
+        position: absolute;
+        top: 15.5em;
+        right: 5px;
+        cursor: pointer;
+    }
+    
+    .imageDiv {
+        position: absolute;
+        right:0;
+        left:0;
+        top: 0em;
+        margin: 5px;
+        height: 275px;
+        border-radius: 1px;
+    }
+    
+    img {
+        shape-image-threshold: inherit;
+        position: relative;
+    }
+    
+    .textDiv {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 13.5em;
+        padding-left: .25em;
+        line-height: 1.15em;
+    }
+    
+    .movieTitle {
+        position: relative;
+        /* top:.2em; */
+        bottom: .85em;
+        padding-left:.3em;
+        padding-bottom: 1.0em;
+        text-decoration: none;
+        color: #eeeeee;
+        font-size: 1.2rem;
+        display: flex;
+   
+    }
+    .deleteMovies {
+        position: relative;
+        top:.2em;
+        bottom: .85em;
+    }
+    .voteAverage {    
+        position: absolute;
+        top: 15.2em;
+        left: 5px;
+        /* background-color: lime; */
+    }
+    #starIcon{
+        position: relative;
+        top: .12em;
+        font-size: 1em;
+        
+        /* background-color: purple; */
+    
+    }
+    .errorMsg {
+        color: red;
+    }
+    
+    .red {
+        color:red;
+    }
+
+    #delete {
+        position: absolute;
+        top: 5.8em;
+        right: .4em;
+         
+    }
+
+    #delete:hover {
+        transform: scale(1.5);
+    }
+
+    #heartIcon:hover {
+        transform: scale(1.5);
+    }
+
+    .img-fluid {
+        position:relative;
+    }

@@ -1,3 +1,16 @@
-<div>
-    <p *ngFor="let movie of list">{{movie.title}}</p>
+<div class="logo">WATCH LIST</div>
+<div class="moviesDiv">  
+  <div *ngFor="let movie of list" class="movieDiv" >
+      <i id="heartIcon"class="material-icons red" (click)=" removeTask(movie)"[ngClass]="{'red': movie.favorite===true}">favorite_border</i>
+    <div class="deleteMovies">
+      <i id='delete' (click)="removeTask(movie)" class="fas fa-times" ></i>
+    </div>
+    <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"></div>
+      <div class="textDiv">
+       <a routerLink="/movie-detail" class="movieTitle" >{{ movie.title }}</a>
+      </div>
+    <span class="voteAverage"><i id="starIcon" class="material-icons" >star</i>{{movie.vote_average}}</span>
+  </div> 
 </div>
+
+

@@ -32,6 +32,8 @@
     position: absolute;
     top: 15.5em;
     right: 5px;
+    cursor: pointer;
+   
 }
 
 .imageDiv {
@@ -80,4 +82,11 @@ img {
 }
 .errorMsg {
     color: red;
+}
+
+.red {
+    color:red;
+    
+   
+    
 }

@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 // import { Logger } from './services/logger.service';
-import { MessageService } from './services/message.service';
+// import { MessageService } from './services/message.service';
 import { Api } from './services/api.service';
 
 const appRoutes: Routes = [
