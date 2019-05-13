@@ -10,6 +10,7 @@ export class watchListPageComponent implements OnInit {
   title = 'movie-app';
   red:boolean;
   list:any[];
+
   constructor(private api: Api) {}
   ngOnInit() {
 
