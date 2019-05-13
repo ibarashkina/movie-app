@@ -54,5 +54,9 @@ searchMovie = (moviestr) => {
     return this.http.get(genreApi);
   }
 
-}
+  getGenreList(genreId: number) {
+      const genreUrl = `https://api.themoviedb.org/3/discover/movie?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&with_genres=${genreId}`;
+      return this.http.get(genreUrl);
+  }
 
+}
