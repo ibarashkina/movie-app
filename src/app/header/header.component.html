@@ -14,16 +14,8 @@
       <option id="filter2">Option 2</option>
       <option id="filter3">Option 3</option> -->
     <!-- </select> -->
-     
-  <!-- <div  class="nav-item">    
-      <select id=filterValue class="filter" value="filterValue">
-      <option selected disabled hidden>filter</option>
-      <option id="filter1">Option 1</option>
-      <option id="filter2">Option 2</option>
-      <option id="filter3">Option 3</option>
-      </select>
-  </div> -->
-  </div>
+
+    </div>
 </div>
   <div class="filterBtn_checkboxes">
       <button  class="toggle-filterbtn" (click)="toggleFilters()">filters</button>
@@ -35,6 +27,17 @@
             <p><input id="chkBox" type="checkbox" (click)="getNowPlayingMovies()" /><label>Now Playing</label></p>
             <p><input  id="chkBox" type="checkbox" (click)="getPopularMovies()" /><label>Popular</label></p>
       </div>
+  </div>
+      <div class="nav-item">  
+        <select class="genreFilter" (change)="onChange($event)">
+          <option disabled>Genres</option>
+          <option *ngFor="let genre of genreList" [value]="genre.id">{{genre.name}}</option>
+        </select>
+
+    </div>
+
+  </div>
+
   </div>
   <form name="userIcons" id="userIcons">
       

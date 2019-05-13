@@ -1,6 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
 import { Api } from '../services/api.service';
+
+interface GenreData {
+  genres: Genres[];
+}
+
+interface Genres {
+  id: number;
+  number: string;
+}
+
 
 @Component({
   selector: 'app-header',
@@ -11,15 +21,26 @@ export class HeaderComponent implements OnInit {
   main: boolean = false;
   movie: any;
   movieString: string;
+
   mainfilter: boolean = false;
   // search_result: [];
+
+  search_result: [];
+  genreList: Genres[];
+  genreId: number;
+
+
 constructor(private router: ActivatedRoute, private api: Api, ) { }
 
 ngOnInit() {
         this.api.getMovie().subscribe(data => {
         this.movie = data;
         // console.log(data);
-      });        
+      });
+
+      this.api.getGenreMovies().subscribe((data:GenreData) => {
+        this.genreList = data.genres;
+      });
 }
 
   toggleSearchInput = () => {
@@ -58,10 +79,18 @@ getPopularMovies = () => {
   });
 }
 
-getGenreMovies = () => {
-  this.api.getGenreMovies().subscribe((data: {results: []}) => {
-    console.log(data.results);
-    this.api.updateMovieList(data.results);
-  });
+onChange = (event) => {
+  this.genreId = event.target.value;
+  // this.router.navigate([event.target.value]);
+  console.log(this.genreId);
 }
+
+
+
+// getGenreMovies = () => {
+//   this.api.getGenreMovies().subscribe((data: {results: []}) => {
+//     console.log(data.results);
+//     this.api.updateMovieList(data.results);
+//   });
+// }
 }
