@@ -3,37 +3,44 @@
   <div  class="collapse navbar-collapse"  id="navbarText">
   <div  class="filters-container">
   <div  class="nav-item">
-    <select id=filterValue class="filter" value="filterValue" >
+      <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button>
+      <p><button id="ui" type="button" (click)="getNowPlayingMovies()">Now Playing</button></p>
+      <p><button id="ui" type="button" (click)="getPopularMovies()">Popular</button></p>
+            
+    <!-- <select id=filterValue class="filter" value="filterValue" >
       <option selected disabled hidden>filter</option>
-      <option id="filter1">Option 1</option>
+      <option id="filter1"><button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button></option>
       <option id="filter2">Option 2</option>
       <option id="filter3">Option 3</option>
-    </select></div>
+    </select> -->
+  </div>
   <div  class="nav-item">
-    <select id=filterValue class="filter" value="filterValue">
+    <button id="ui" type="button" (click)="getGenreMovies()">Genre</button>
+      
+    <!-- <select id=filterValue class="filter" value="filterValue">
       <option selected disabled hidden>filter</option>
       <option id="filter1">Option 1</option>
       <option id="filter2">Option 2</option>
       <option id="filter3">Option 3</option>
-    </select></div>
-  <div  class="nav-item">
-    <select id=filterValue class="filter" value="filterValue">
+    </select> -->
+  </div>
+  <div  class="nav-item">    
+      <select id=filterValue class="filter" value="filterValue">
       <option selected disabled hidden>filter</option>
       <option id="filter1">Option 1</option>
       <option id="filter2">Option 2</option>
       <option id="filter3">Option 3</option>
-    </select></div>
+      </select>
+  </div>
   </div>
   </div>
   <form name="userIcons" id="userIcons">
-
-    <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="searchMovie" (oninput)='searchMovies()' style="height:18px;"/></span>
+                                                                        <!-- [(ngModel)]="searchTask" (input)='filter(searchTask)'-->
+    <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="movieString" (change)='searchMovie()' style="height:18px;"/></span>
     <span *ngIf="!main"></span>
-    <!-- <a href="{{ movie.homepage }}" target="_blank">
-      Movie Homepage
-    </a> -->
+
     <button id="ui" type="toggle" (click)="toggleSearchInput()"><i class="fa fa-search"></i></button>
-    <a id="ui" routerLink="/" target="_blank"><i class='fas fa-home'></i></a>
+    <a id="ui" routerLink="/" ><i class='fas fa-home'></i></a>
 
     <button id="ui" routerLink='/watch-list-page'><i class='fas fa-heart'></i></button>
     <button id="ui"><i class='fas fa-user-alt'></i></button>

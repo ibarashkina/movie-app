@@ -1,7 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
-// import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
 import { Api } from '../services/api.service';
 
 interface Movies {
@@ -26,6 +24,7 @@ interface ApiData {
   results: Movies[];
   total_results: number;
   total_pages: number;
+  showArrow: boolean;
 }
 
 @Component({
@@ -38,24 +37,20 @@ export class movieListComponent implements OnInit {
   movie: any;
   errorMessage:string;
   movieId: number;
- 
   red:boolean=true;
-  numberIngr: string = '2+';
-  pagFrom: number = 0;
-  pagTo: number = 20;
- 
-  
   favorite:boolean;
-  constructor(private router: ActivatedRoute, private api: Api) { }
+
+  constructor(private api: Api, private route: ActivatedRoute) { }
+
   
   ngOnInit() {
     this.api.movieList.subscribe(list => this.list = list);  
+
 
       this.api.getMovie().subscribe((data:ApiData) => {
         this.movie = data; 
         this.api.updateMovieList(data.results);
       });
-   
   }
 
   
@@ -67,32 +62,36 @@ export class movieListComponent implements OnInit {
    }
 
 
-  //  changePag = (where) => {
-  //   if (where === true){
-  //     this.pagFrom += 20;
-  //     this.pagTo += 20;
-  //     this.filterMovieList();
-  //   } else if (where === false){
-  //     if(this.pagFrom > 0 ){
-  //     this.pagFrom -= 20;
-  //     this.pagTo -= 20;
-  //     this.filterMovieList();
-  //     } 
-  //   }
+      this.route.params.subscribe(params => {
+        this.api.getMoviePage(params.page).subscribe((data:ApiData) => {
+          this.movie = data;
+          if (data.page === 1) {
+            data.showArrow = false; 
+            } else {
+              data.showArrow = true;
+            }
+          this.api.updateMovieList(data.results);
+        });
+      }),
+
+      error => {
+        this.errorMessage = error.message;
+    }
+      
+  }
+
+
+  // constructor(private api: Api) { }
+  
+  // ngOnInit() {
+  //   this.api.movieList.subscribe(list => this.list = list);  
+
+  //     this.api.getMovie().subscribe((data:ApiData) => {
+  //       this.movie = data; 
+  //       this.api.updateMovieList(data.results);
+  //     });
+    
   // }
 
-  //     filterMovieList = () => {
-
-  //       this.api.getMovie(this.movie,encodeURIComponent(this.numberIngr), this.pagFrom, this.pagTo ).subscribe((data: ApiData) => {
-  //         this.api.updateMovieList(data.results);
-  //       });
-  //     }
-  // getId = item => {
-  //   const index = this.list.indexOf(item);
-  //   this.movieId = this.list[index].id;
-  //   console.log(this.movieId);
-  //   this.clicked.emit(this.movieId);
-
-  // }
   
 }
