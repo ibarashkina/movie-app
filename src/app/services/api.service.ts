@@ -17,7 +17,20 @@ getMoviePage = (page:number) => {
     const pageUrl = `https://api.themoviedb.org/3/discover/movie?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`;
     return this.http.get(pageUrl); 
 };
+// Checkbox: <input type="checkbox" id="myCheck"  onclick="myFunction()">
 
+// <p id="text" style="display:none">Checkbox is CHECKED!</p>
+
+// <script>
+// function myFunction() {
+//   var checkBox = document.getElementById("myCheck");
+//   var text = document.getElementById("text");
+//   if (checkBox.checked == true){
+//     text.style.display = "block";
+//   } else {
+//      text.style.display = "none";
+//   }
+// }
 
 getMovieDetail = (movieId:number) => { 
     const detailUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=ccf98653c165e83729605d20546c01d7&language=en-US`

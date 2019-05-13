@@ -75,8 +75,7 @@ export class movieListComponent implements OnInit {
 
       error => {
         this.errorMessage = error.message;
-    }
-      
+    }   
   }
-
 }
+

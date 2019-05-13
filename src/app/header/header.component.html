@@ -1,30 +1,34 @@
 <nav  class="navbar-span"  style="background-color: black;">
-  <a  class="navbar-logo" style='color:white; text-decoration: none;' href="#"><h1 style="padding: 0; margin: 0;">MOVIES</h1></a>
+  <a  class="navbar-logo" style='color:white; text-decoration: none;' href="#"><h1 style="padding: 0; margin: 0;">WATCH ME</h1></a>
   <div  class="collapse navbar-collapse"  id="navbarText">
-  <div  class="filters-container">
-  <div  class="nav-item">
-      <button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button>
-      <p><button id="ui" type="button" (click)="getNowPlayingMovies()">Now Playing</button></p>
-      <p><button id="ui" type="button" (click)="getPopularMovies()">Popular</button></p>
+    <div  class="filters-container">
+      <div  class="filter-buttons">
+        <button id="filterbtn" type="button" (click)="getNowPlayingMovies()">Now Playing</button>
+        <button id="filterbtn" type="button" (click)="getPopularMovies()">Popular</button>
+        <button id="filterbtn" type="button" (click)="getTopRatedMovies()">Top Rated</button>
+        <!-- <button id="filterbtn" type="button" (click)="getGenreMovies()">Genre</button> -->
+      </div>      
             
-    <!-- <select id=filterValue class="filter" value="filterValue" >
-      <option selected disabled hidden>filter</option>
-      <option id="filter1"><button id="ui" type="button" (click)="getTopRatedMovies()">Top Rated</button></option>
-      <option id="filter2">Option 2</option>
-      <option id="filter3">Option 3</option>
-    </select> -->
-  </div>
-  <!-- <div  class="nav-item"> -->
-    <!-- <button id="ui" type="button" (click)="getGenreMovies()">Genre</button> -->
-      
-    <!-- <select id=filterValue class="filter" value="filterValue">
-      <option selected disabled hidden>filter</option>
+      <!-- <option selected disabled hidden>filter</option>
       <option id="filter1">Option 1</option>
       <option id="filter2">Option 2</option>
-      <option id="filter3">Option 3</option>
-    </select> -->
-  <!-- </div> -->
-    <div class="nav-item">  
+      <option id="filter3">Option 3</option> -->
+    <!-- </select> -->
+
+    </div>
+</div>
+  <div class="filterBtn_checkboxes">
+      <button  class="toggle-filterbtn" (click)="toggleFilters()">filters</button>
+      <div *ngIf="!mainfilter" class="checkboxes-container"></div>
+      <div *ngIf="mainfilter" class="filter-checkboxes"  > 
+          <!-- <select id=filterValue class="filter" value="filterValue"> -->
+            <input id="chkBox" type="checkbox" (click)="getGenreMovies()" /><label>Genre</label>
+            <p><input id="chkBox" type="checkbox" (click)="getTopRatedMovies()" /><label>Top Rated</label></p>
+            <p><input id="chkBox" type="checkbox" (click)="getNowPlayingMovies()" /><label>Now Playing</label></p>
+            <p><input  id="chkBox" type="checkbox" (click)="getPopularMovies()" /><label>Popular</label></p>
+      </div>
+  </div>
+      <div class="nav-item">  
         <select class="genreFilter" (change)="onChange($event)">
           <option disabled>Genres</option>
           <option *ngFor="let genre of genreList" [value]="genre.id">{{genre.name}}</option>
@@ -33,14 +37,16 @@
     </div>
 
   </div>
+
   </div>
   <form name="userIcons" id="userIcons">
+      
                                                                         <!-- [(ngModel)]="searchTask" (input)='filter(searchTask)'-->
     <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="movieString" (change)='searchMovie()' style="height:18px;"/></span>
     <span *ngIf="!main"></span>
 
     <button id="ui" type="toggle" (click)="toggleSearchInput()"><i class="fa fa-search"></i></button>
-    <a id="ui" routerLink="/" ><i class='fas fa-home'></i></a>
+    <a id="ui" routerLink="/" target="_parent" ><i id="fa-home" class='fas fa-home'></i></a>
 
     <button id="ui" routerLink='/watch-list-page'><i class='fas fa-heart'></i></button>
     <button id="ui"><i class='fas fa-user-alt'></i></button>

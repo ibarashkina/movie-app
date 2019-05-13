@@ -18,12 +18,17 @@ interface Genres {
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  main: boolean = true;
+  main: boolean = false;
   movie: any;
   movieString: string;
+
+  mainfilter: boolean = false;
+  // search_result: [];
+
   search_result: [];
   genreList: Genres[];
   genreId: number;
+
 
 constructor(private router: ActivatedRoute, private api: Api, ) { }
 
@@ -41,6 +46,10 @@ ngOnInit() {
   toggleSearchInput = () => {
     this.main = !this.main;
  };
+
+ toggleFilters = () => {
+  this.mainfilter = !this.mainfilter;
+};
 
 searchMovie = () => {
   this.api.searchMovie(this.movieString).subscribe((data: {results: []}) => {
