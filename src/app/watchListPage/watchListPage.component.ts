@@ -8,10 +8,18 @@ import { Api } from '../services/api.service';
 })
 export class watchListPageComponent implements OnInit {
   title = 'movie-app';
-  list:[];
+  red:boolean;
+  list:any[];
   constructor(private api: Api) {}
   ngOnInit() {
 
-    this.api.movieList.subscribe(list => this.list = list);  
+    this.api.movieList.subscribe(list => this.list = list.filter(movie => movie.favorite));  
+  }
+
+  removeTask= (movie) => {
+    this.red=!this.red;
+    movie.favorite=false;
+   //  const list.movies =[]
+    this.api.updateMovieList(this.list);
   }
 }

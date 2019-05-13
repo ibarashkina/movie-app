@@ -12,6 +12,7 @@ import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 // import { Logger } from './services/logger.service';
 import { Api } from './services/api.service';
 
+
 const appRoutes: Routes = [
   {path: 'home/:page', component: movieListComponent, pathMatch: 'full' },
   {path: 'search-criteria', component: searchCriteriaComponent},
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     searchCriteriaComponent,
     watchListPageComponent,
     MovieDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    
     
   ],
   imports: [

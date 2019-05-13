@@ -44,6 +44,7 @@
 #userIcons #ui {
     background-color:black; 
     border:none;
+    cursor:pointer;
 }
 
 i {
