@@ -11,8 +11,10 @@
 }
 
 .navbar-logo {
-    width: 20%; 
-    /* background-color: blueviolet;  */
+    position: relative;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    width: 28%; 
 }
 
 .filter {
@@ -27,18 +29,63 @@
     flex-direction: row;
     justify-content: space-evenly;
     list-style: none;
-    width: 500px;
-    /* margin-left: 7%; */
+    width: 400px;
     /* background-color: greenyellow; */
 }
 
+#filterbtn {
+    margin: 0px 2px;
+    width: 95px;
+    height: 28px;
+    color:white;
+    border: none;
+    box-shadow: 0 1px 15px 1px rgba(247, 244, 244, 0.2), 0 6px 10px 0 rgba(247, 244, 244, 0.2);
+    background-color: black;
+}
+
+.toggle-filterbtn{
+    width: 100px;
+    height: 28px;
+    color:white;
+    border: none;
+    box-shadow: 0 1px 15px 1px rgba(247, 244, 244, 0.2), 0 6px 10px 0 rgba(247, 244, 244, 0.1);
+    background-color: black;
+}
+
+#checkbox {
+    width: 100px;
+    /* color:white; */
+    background-color: black;
+    border: 1px solid white;
+    height: 24px;
+    /* background-color: blueviolet;  */
+}
+.filterBtn_checkboxes {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    position: absolute;
+    left: 635px;
+    right: 330px;
+    justify-content: flex-end;
+    background-color: black;
+    /* border: 1px solid white; */
+}
+
+label {
+    color: white;
+    font-size: .83em;
+}
+/* .toggle-filterbtn {
+    margin: auto;
+} */
 #userIcons {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 33%;
-    height: 24px;
-    /* background-color: blue; */
+    width: 40%;
+    height: 26px;
+    /* background-color: greenyellow; */
 }
 
 #userIcons #ui {
@@ -50,22 +97,25 @@ i {
     color:white; 
     font-size:20px;
 }
+#fa-home {
+    margin-top: 1px;
+}
 
 input[type=text] {
-    width: 130px;
+    width: 155px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     /* border-radius: 4px; */
     font-size: 16px;
     background-color: black;
     color: white;
-    background-position: 10px 10px; 
+    /* background-position: 10px 0px;  */
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.2s ease-out-in;
-    transition: width 0.2s ease-out-in;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-out-in;
+    transition: width 0.4s ease-out-in;
   }
   
   input[type=text]:focus {
-    width: 100%;
+    /* width: 50px; */
   }

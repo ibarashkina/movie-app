@@ -56,22 +56,6 @@ export class movieListComponent implements OnInit {
 
       error => {
         this.errorMessage = error.message;
-    }
-      
+    }   
   }
-
-
-  // constructor(private api: Api) { }
-  
-  // ngOnInit() {
-  //   this.api.movieList.subscribe(list => this.list = list);  
-
-  //     this.api.getMovie().subscribe((data:ApiData) => {
-  //       this.movie = data; 
-  //       this.api.updateMovieList(data.results);
-  //     });
-    
-  // }
-
-  
 }

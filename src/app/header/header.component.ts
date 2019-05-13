@@ -8,10 +8,11 @@ import { Api } from '../services/api.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  main: boolean = true;
+  main: boolean = false;
   movie: any;
   movieString: string;
-  search_result: [];
+  mainfilter: boolean = false;
+  // search_result: [];
 constructor(private router: ActivatedRoute, private api: Api, ) { }
 
 ngOnInit() {
@@ -24,6 +25,10 @@ ngOnInit() {
   toggleSearchInput = () => {
     this.main = !this.main;
  };
+
+ toggleFilters = () => {
+  this.mainfilter = !this.mainfilter;
+};
 
 searchMovie = () => {
   this.api.searchMovie(this.movieString).subscribe((data: {results: []}) => {
