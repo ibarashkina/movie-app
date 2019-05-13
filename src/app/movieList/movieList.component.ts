@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 // import { searchCriteriaComponent } from './searchCriteria/searchCriteria.component';
 import { Api } from '../services/api.service';
 
@@ -37,10 +38,14 @@ export class movieListComponent implements OnInit {
   movie: any;
   errorMessage:string;
   movieId: number;
-  favorite:boolean;
+ 
   red:boolean=true;
+  numberIngr: string = '2+';
+  pagFrom: number = 0;
+  pagTo: number = 20;
+ 
   
-
+  favorite:boolean;
   constructor(private router: ActivatedRoute, private api: Api) { }
   
   ngOnInit() {
@@ -52,12 +57,36 @@ export class movieListComponent implements OnInit {
       });
    
   }
+
+  
   addWatchList= (movie) => {
      this.red=!this.red;
      movie.favorite=true;
     //  const list.movies =[]
      this.api.updateMovieList(this.list);
    }
+
+
+  //  changePag = (where) => {
+  //   if (where === true){
+  //     this.pagFrom += 20;
+  //     this.pagTo += 20;
+  //     this.filterMovieList();
+  //   } else if (where === false){
+  //     if(this.pagFrom > 0 ){
+  //     this.pagFrom -= 20;
+  //     this.pagTo -= 20;
+  //     this.filterMovieList();
+  //     } 
+  //   }
+  // }
+
+  //     filterMovieList = () => {
+
+  //       this.api.getMovie(this.movie,encodeURIComponent(this.numberIngr), this.pagFrom, this.pagTo ).subscribe((data: ApiData) => {
+  //         this.api.updateMovieList(data.results);
+  //       });
+  //     }
   // getId = item => {
   //   const index = this.list.indexOf(item);
   //   this.movieId = this.list[index].id;

@@ -14,6 +14,7 @@ import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 // import { MessageService } from './services/message.service';
 import { Api } from './services/api.service';
 
+
 const appRoutes: Routes = [
   {path: '', component: movieListComponent, pathMatch: 'full' },
   {path: 'search-criteria', component: searchCriteriaComponent},
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     searchCriteriaComponent,
     watchListPageComponent,
     MovieDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    
     
   ],
   imports: [
