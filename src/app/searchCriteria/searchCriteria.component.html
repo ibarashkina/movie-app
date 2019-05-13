@@ -1,0 +1,9 @@
+<div class="moviesDiv" *ngIf="movie">
+        <div class="movieDiv" *ngFor="let movie of list">
+            <p class="voteAverage"><i id="starIcon" class="material-icons">star</i>{{movie.vote_average}}</p>
+            <i id="heartIcon"class="material-icons">favorite_border</i>
+            <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"></div>
+            <div class="textDiv">
+                <a [routerLink]="['/movie-detail', movie.id]" class="movieTitle">{{ movie.title }}</a>
+            </div>
+        </div>

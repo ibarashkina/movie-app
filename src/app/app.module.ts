@@ -14,7 +14,7 @@ import { Api } from './services/api.service';
 
 const appRoutes: Routes = [
   {path: 'home/:page', component: movieListComponent, pathMatch: 'full' },
-  {path: 'search-criteria', component: searchCriteriaComponent},
+  {path: 'search-criteria/:id', component: searchCriteriaComponent},
   {path: 'watch-list-page', component: watchListPageComponent},
   {path: 'movie-detail/:id', component: MovieDetailComponent},
   {path: '', redirectTo: 'home/1', pathMatch: 'full' },

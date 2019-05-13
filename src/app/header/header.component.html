@@ -14,8 +14,8 @@
       <option id="filter3">Option 3</option>
     </select> -->
   </div>
-  <div  class="nav-item">
-    <button id="ui" type="button" (click)="getGenreMovies()">Genre</button>
+  <!-- <div  class="nav-item"> -->
+    <!-- <button id="ui" type="button" (click)="getGenreMovies()">Genre</button> -->
       
     <!-- <select id=filterValue class="filter" value="filterValue">
       <option selected disabled hidden>filter</option>
@@ -23,15 +23,15 @@
       <option id="filter2">Option 2</option>
       <option id="filter3">Option 3</option>
     </select> -->
-  </div>
-  <div  class="nav-item">    
-      <select id=filterValue class="filter" value="filterValue">
-      <option selected disabled hidden>filter</option>
-      <option id="filter1">Option 1</option>
-      <option id="filter2">Option 2</option>
-      <option id="filter3">Option 3</option>
-      </select>
-  </div>
+  <!-- </div> -->
+    <div class="nav-item">  
+        <select class="genreFilter" (change)="onChange($event)">
+          <option disabled>Genres</option>
+          <option *ngFor="let genre of genreList" [value]="genre.id">{{genre.name}}</option>
+        </select>
+
+    </div>
+
   </div>
   </div>
   <form name="userIcons" id="userIcons">
