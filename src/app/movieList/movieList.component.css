@@ -94,16 +94,20 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: 35px;
 
 }
 
 .page p {
-    color: goldenrod;
+    color: lightgray;
 }
 .arrows {
     color: #eeeeee;
     font-size: 2rem;
+}
+
+.arrows:hover {
+    color: goldenrod;
 }
