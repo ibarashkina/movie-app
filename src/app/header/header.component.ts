@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
   search_result: [];
   genreList: Genres[];
-  genreId: number;
+  genreId: number = 0;
 
 
 constructor(private router: ActivatedRoute, private api: Api, ) { }
@@ -55,6 +55,7 @@ searchMovie = () => {
   this.api.searchMovie(this.movieString).subscribe((data: {results: []}) => {
     console.log(data.results);
     this.api.updateMovieList(data.results);
+    this.genreId = 0;
   });
 }
 
@@ -80,7 +81,7 @@ getPopularMovies = () => {
 }
 
 onChange = (event) => {
-  this.genreId = event.target.value;
+  this.api.getGenreList(this.genreId).subscribe((data: {results: []}) => this.api.updateMovieList(data.results));
   // this.router.navigate([event.target.value]);
   console.log(this.genreId);
 }
