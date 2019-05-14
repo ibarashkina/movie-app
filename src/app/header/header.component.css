@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    /* justify-content: space-between; */
     z-index: 1;
     left: 0;
     right: 0;

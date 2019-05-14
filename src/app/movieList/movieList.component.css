@@ -33,7 +33,10 @@
     top: 15.5em;
     right: 5px;
     cursor: pointer;
-   
+}
+
+#heartIcon:hover {
+    color: red;
 }
 
 .imageDiv {
@@ -73,10 +76,12 @@ img {
     left: 5px;
     /* background-color: lime; */
 }
+
 #starIcon{
     position: relative;
     top: .12em;
     font-size: 1em;
+    color: rgba(255, 208, 0, 0.89);
     /* background-color: purple; */
 
 }
@@ -103,6 +108,7 @@ img {
 .page p {
     color: lightgray;
 }
+
 .arrows {
     color: #eeeeee;
     font-size: 2rem;
