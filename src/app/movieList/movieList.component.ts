@@ -42,24 +42,14 @@ export class movieListComponent implements OnInit {
 
   constructor(private api: Api, private route: ActivatedRoute) { }
 
-
   addWatchList= (movie) => {
-    this.red=!this.red;
-    movie.favorite=true;
+    movie.favorite=!movie.favorite;
    //  const list.movies =[]
     this.api.updateMovieList(this.list);
   }
-
   
   ngOnInit() {
     this.api.movieList.subscribe(list => this.list = list);  
-
-
-      this.api.getMovie().subscribe((data:ApiData) => {
-        this.movie = data; 
-        this.api.updateMovieList(data.results);
-      });
-  
 
       this.route.params.subscribe(params => {
         this.api.getMoviePage(params.page).subscribe((data:ApiData) => {

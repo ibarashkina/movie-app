@@ -33,14 +33,11 @@ export class HeaderComponent implements OnInit {
 constructor(private router: ActivatedRoute, private api: Api, ) { }
 
 ngOnInit() {
-        this.api.getMovie().subscribe(data => {
-        this.movie = data;
-        // console.log(data);
-      });
-
+        
       this.api.getGenreMovies().subscribe((data:GenreData) => {
         this.genreList = data.genres;
       });
+     
 }
 
   toggleSearchInput = () => {
