@@ -20,11 +20,11 @@
     position: relative;
     font-family: 'Roboto Condensed', sans-serif;
     background-color: black;        
-    /* border: solid 1px rgb(204, 199, 199); */
+    border: solid 1.5px rgb(204, 199, 199);
     font-size: 1.2rem;
     /* border-radius: 1px;         */
     /* border: solid 1px goldenrod; */
-    box-shadow: 0 4px 8px 0 rgba(248, 247, 247, 0.2), 0 1px 5px 0 rgba(248, 247, 247, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(248, 247, 247, 0.2), 0 1px 5px 0 rgba(248, 247, 247, 0.2); */
     color: rgb(204, 199, 199);    
 }
 

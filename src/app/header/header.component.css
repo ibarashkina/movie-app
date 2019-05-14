@@ -130,7 +130,7 @@ i {
 } */
 
 input[type=text] {
-    width: 155px;
+    width: 180px;
     box-sizing: border-box;
     border: 2px solid #eeeeee;
     font-size: 1.5rem;
