@@ -4,15 +4,15 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <div class="filters-container">
         <div class="filter-buttons">
-          <button id="filterbtn" type="button" (click)="getNowPlayingMovies()">Now Playing</button>
-          <button id="filterbtn" type="button" (click)="getPopularMovies()">Popular</button>
-          <button id="filterbtn" type="button" (click)="getTopRatedMovies()">Top Rated</button>
+          <button id="filterbtn" type="button" (click)="getNowPlayingMovies()">NOW PLAYING</button>
+          <button id="filterbtn" type="button" (click)="getPopularMovies()">POPULAR</button>
+          <button id="filterbtn" type="button" (click)="getTopRatedMovies()">TOP RATED</button>
         </div>
       </div>
     </div>
     <div class="nav-item">
       <select class="genreFilter" (change)="onChange($event)" [(ngModel)]="genreId">
-        <option value="0" disabled>Genres</option>
+        <option value="0" disabled>GENRES</option>
         <option *ngFor="let genre of genreList" [value]="genre.id">{{genre.name}}</option>
       </select>
     </div>

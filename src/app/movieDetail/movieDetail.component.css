@@ -55,3 +55,19 @@ a:hover {
 img {
     height: 500px;
 }
+
+#calendar {
+    color: rgb(104, 104, 146);
+}
+
+#timer {
+    color: pink;
+}
+
+#star {
+color: rgb(252, 220, 42);
+}
+
+#theaters {
+    color: rgb(117, 117, 117);
+}
