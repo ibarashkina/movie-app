@@ -7,7 +7,7 @@
     </div>
     <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}"></div>
       <div class="textDiv">
-       <a routerLink="/movie-detail" class="movieTitle" >{{ movie.title }}</a>
+      <a [routerLink]="['/movie-detail', movie.id]" class="movieTitle" >{{ movie.title }}</a>
       </div>
     <span class="voteAverage"><i id="starIcon" class="material-icons" >star</i>{{movie.vote_average}}</span>
   </div> 
