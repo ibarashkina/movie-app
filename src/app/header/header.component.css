@@ -27,11 +27,11 @@
     position: relative;
     white-space: nowrap;
     color:white;
-    text-decoration: none;
-    width: 28%; 
+    /* text-decoration: none; */
+    /* width: 28%; 
 }
 
-h1 {
+h1 { */
     text-decoration: none;
     color: #eeeeee;
     font-family: 'Gugi', cursive;
