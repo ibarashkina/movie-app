@@ -1,16 +1,16 @@
-<nav class="navbar-span" style="background-color: black;">
-  <a class="navbar-logo" style='color:white; text-decoration: none;' href="#">
-    <h1 style="padding: 0; margin: 0;">WATCH ME</h1>
+<nav class="navbar-span">
+  <a class="navbar-logo" href="#">
+    <h1>WATCH ME</h1>
   </a>
   <div class="collapse navbar-collapse" id="navbarText">
     <div class="filters-container">
       <div class="filter-buttons">
-        <button id="filterbtn" type="button" (click)="getNowPlayingMovies()">Now Playing</button>
-        <button id="filterbtn" type="button" (click)="getPopularMovies()">Popular</button>
-        <button id="filterbtn" type="button" (click)="getTopRatedMovies()">Top Rated</button>
+        <button id="filterbtn" type="button" routerLink='/now-playing-list'>Now Playing</button>
+        <button id="filterbtn" type="button" routerLink='/popular-list'>Popular</button>
+        <button id="filterbtn" type="button"  routerLink='/top-rated-list'>Top Rated</button>
         <!-- <button id="filterbtn" type="button" (click)="getGenreMovies()">Genre</button> -->
       </div>
-
+      <!-- [routerLink]="['/movie-detail', movie.id]" -->
      
 
     </div>
@@ -24,8 +24,6 @@
   </div>
 
   <form name="userIcons" id="userIcons">
-
-    <!-- [(ngModel)]="searchTask" (input)='filter(searchTask)'-->
     <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="movieString"
         (change)='searchMovie()' style="height:18px;" /></span>
     <span *ngIf="!main"></span>

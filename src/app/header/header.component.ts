@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route } from '@angular/router';
 import { Api } from '../services/api.service';
 
 interface GenreData {
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
   genreId: number = 0;
 
 
-constructor(private router: ActivatedRoute, private api: Api, ) { }
+constructor(private route: ActivatedRoute, private api: Api, ) { }
 
 ngOnInit() {
         

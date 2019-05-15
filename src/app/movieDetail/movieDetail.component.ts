@@ -48,8 +48,12 @@ export class MovieDetailComponent implements OnInit {
         this.movie = data; 
       });
   })
+}
 
-    }
-
-
+exitTask= (movie) => {
+  // this.red=!this.red;
+  this.movie = !this.movie;
+ //  const list.movies =[]
+//  this.api.updateMovieList(data.results);
+}
 }

@@ -8,7 +8,7 @@
       </div>
   </div>
 </div>
-<div class="page">
+<div class="page" *ngIf="movie">
     <a name="arrows" class="arrows" [routerLink]="['/home', movie.page - 1]" *ngIf="movie.showArrow">
       <i class="material-icons">keyboard_arrow_left</i>
     </a>
