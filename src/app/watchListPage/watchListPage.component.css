@@ -27,55 +27,47 @@ div {
         flex-direction: column;
         margin: 10px 25px;
         padding: 0;
-        width: 211px;
         height: 400px;
         justify-content: center;
         position: relative;
         font-family: 'Roboto Condensed', sans-serif;
         background-color: black;        
-        /* border: solid 1px rgb(204, 199, 199); */
         font-size: 1.5rem;
-        /* border-radius: 1px;         */
-        border: solid 1px goldenrod;
-    
-        color: rgb(204, 199, 199);    
+        box-shadow: 0 4px 8px 0 rgba(248, 247, 247, 0.2), 0 1px 5px 0 rgba(248, 247, 247, 0.2);
+        color: rgb(204, 199, 199);   
     }
     #heartIcon {
         position: absolute;
-        top: 15.5em;
+        top: 15.4em;
         right: 5px;
         cursor: pointer;
     }
     
     .imageDiv {
-        position: absolute;
         right:0;
         left:0;
         top: 0em;
-        margin: 5px;
-        height: 275px;
+        margin: 0 .3em;
+        height: 475px;
         border-radius: 1px;
     }
     
     img {
         shape-image-threshold: inherit;
-        position: relative;
+        
     }
     
     .textDiv {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 13.5em;
+        top: 12.7em;
         padding-left: .25em;
         line-height: 1.15em;
     }
     
     .movieTitle {
         position: relative;
-        /* top:.2em; */
-        bottom: .85em;
-        padding-left:.3em;
         padding-bottom: 1.0em;
         text-decoration: none;
         color: #eeeeee;
@@ -90,16 +82,13 @@ div {
     }
     .voteAverage {    
         position: absolute;
-        top: 15.2em;
+        top: 15.4em;
         left: 5px;
-        /* background-color: lime; */
     }
     #starIcon{
         position: relative;
         top: .12em;
         font-size: 1em;
-        
-        /* background-color: purple; */
     
     }
     .errorMsg {
@@ -112,8 +101,7 @@ div {
 
     #delete {
         position: absolute;
-        top: 5.8em;
-        right: .4em;
+        left: 8.0em;
          
     }
 
@@ -123,8 +111,4 @@ div {
 
     #heartIcon:hover {
         transform: scale(1.5);
-    }
-
-    .img-fluid {
-        position:relative;
     }
