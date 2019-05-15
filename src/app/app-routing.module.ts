@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import { HeaderComponent } from './header/header.component';
 import { movieListComponent } from './movieList/movieList.component';
-import { watchListPageComponent } from './watchListPage/watchListPage.component';
+import { watchlistPageComponent } from './watchlistPage/watchlistPage.component';
 import { topRatedListComponent } from './topRatedList/topRatedList.component';
 import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 import { nowPlayingComponent } from './nowPlayingList/nowPlayingList.component';
@@ -12,7 +12,7 @@ import { popularListComponent } from './popularList/popularList.component';
 const routes: Routes = [
   { path: '', component: movieListComponent },
   { path: 'movie/:id', component: movieListComponent },  
-  { path: 'watch-list-page', component: watchListPageComponent },
+  { path: 'watch-list-page', component: watchlistPageComponent },
   { path: 'movie-detail', component: MovieDetailComponent },
   { path: 'now-playing-list', component: nowPlayingComponent},
   { path: 'popular-list', component: popularListComponent},
