@@ -3,10 +3,10 @@ import { Api } from '../services/api.service';
 
 @Component({
   selector: 'watch-list-page',
-  templateUrl: './watchListPage.component.html',
-  styleUrls: ['./watchListPage.component.css']
+  templateUrl: './watchlistPage.component.html',
+  styleUrls: ['./watchlistPage.component.css']
 })
-export class watchListPageComponent implements OnInit {
+export class watchlistPageComponent implements OnInit {
   title = 'movie-app';
   red:boolean;
   list:any[];

@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header/header.component';
 import { movieListComponent } from './movieList/movieList.component';
-import { watchListPageComponent } from './watchListPage/watchListPage.component';
+import { watchlistPageComponent } from './watchlistPage/watchlistPage.component';
 import { nowPlayingComponent } from './nowPlayingList/nowPlayingList.component';
 import { popularListComponent } from './popularList/popularList.component';
 import { topRatedListComponent } from './topRatedList/topRatedList.component';
@@ -19,7 +19,7 @@ import { Api } from './services/api.service';
 
 const appRoutes: Routes = [
   {path: 'home/:page', component: movieListComponent, pathMatch: 'full' },
-  {path: 'watch-list-page', component: watchListPageComponent},
+  {path: 'watch-list-page', component: watchlistPageComponent},
   {path: 'now-playing-list', component: nowPlayingComponent},
   {path: 'popular-list', component: popularListComponent},
   {path: 'top-rated-list', component: topRatedListComponent},
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     movieListComponent,
-    watchListPageComponent,
+    watchlistPageComponent,
     MovieDetailComponent,
     HeaderComponent,
     nowPlayingComponent,
