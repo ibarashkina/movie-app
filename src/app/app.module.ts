@@ -20,9 +20,9 @@ import { Api } from './services/api.service';
 const appRoutes: Routes = [
   {path: 'home/:page', component: movieListComponent, pathMatch: 'full' },
   {path: 'watch-list-page', component: watchListPageComponent},
-  {path: 'now-playing-list', component: nowPlayingComponent},
-  {path: 'popular-list', component: popularListComponent},
-  {path: 'top-rated-list', component: topRatedListComponent},
+  {path: 'now-playing-list/:page', component: nowPlayingComponent},
+  {path: 'popular-list/:page', component: popularListComponent},
+  {path: 'top-rated-list/:page', component: topRatedListComponent},
   {path: 'movie-detail/:id', component: MovieDetailComponent},  
   {path: '', redirectTo: 'home/1', pathMatch: 'full' },
   {path: '**', redirectTo: 'home/1'}

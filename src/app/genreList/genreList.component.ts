@@ -27,12 +27,21 @@ interface ApiData {
     showArrow: boolean;
   }
 
+  interface GenreData {
+    genres: Genres[];
+  }
+  
+  interface Genres {
+    id: number;
+    number: string;
+  }
+
 @Component({
-  selector: 'popular-list',
-  templateUrl: './popularList.component.html',
-  styleUrls: ['./popularList.component.css']
+  selector: 'genre-list',
+  templateUrl: './genreList.component.html',
+//   styleUrls: ['./genreList.component.css']
 })
-export class popularListComponent implements OnInit {
+export class genreListComponent implements OnInit {
     list: Movies[];
     movie: any;
     errorMessage:string;
@@ -41,8 +50,11 @@ export class popularListComponent implements OnInit {
     favorite:boolean;
   
     main: boolean = false;
-    movieString: string;  
+    movieString: string;
+  
     mainfilter: boolean = false;
+    genreList: Genres[];
+    genreId: number = 0;
   
     constructor(private api: Api, private route: ActivatedRoute) { }
   
@@ -52,15 +64,20 @@ export class popularListComponent implements OnInit {
       this.api.updateMovieList(this.list);
     }
     
-    scrollUp = () => {
-      window.scroll(0,0);
-    }
-
+    // navigateTo(value) {
+    //     if (value) {
+    //         this.router.navigate([value]);
+    //     }
+    //     return false;
+    // }
     ngOnInit() {
         this.api.movieList.subscribe(list => this.list = list);  
-    
+        // this.api.getGenreList(this.genreId).subscribe((data: {results: []}) => this.api.updateMovieList(data.results));
+        // console.log(this.genreId);
+
+        
           this.route.params.subscribe(params => {
-            this.api.getPopularMovies(params.page).subscribe((data:ApiData) => {
+            this.api.getGenreList(this.genreId).subscribe((data:ApiData) => {
               this.movie = data;
               if (data.page === 1) {
                 data.showArrow = false; 
