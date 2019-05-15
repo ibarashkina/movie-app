@@ -41,11 +41,11 @@ export class MovieDetailComponent implements OnInit {
   list: Movies[];
   movie: any;
 
-  constructor(private api: Api, private route: ActivatedRoute) {}
+  constructor(private api: Api, private route: ActivatedRoute) { }
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.api.getMovieDetail(params.id).subscribe((data:ApiData) => {
-        this.movie = data; 
+      this.api.getMovieDetail(params.id).subscribe((data: ApiData) => {
+        this.movie = data;
       });
   })
 }
@@ -56,4 +56,5 @@ exitTask= (movie) => {
  //  const list.movies =[]
 //  this.api.updateMovieList(data.results);
 }
+
 }

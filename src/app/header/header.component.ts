@@ -79,16 +79,7 @@ getPopularMovies = () => {
 
 onChange = (event) => {
   this.api.getGenreList(this.genreId).subscribe((data: {results: []}) => this.api.updateMovieList(data.results));
-  // this.router.navigate([event.target.value]);
   console.log(this.genreId);
 }
 
-
-
-// getGenreMovies = () => {
-//   this.api.getGenreMovies().subscribe((data: {results: []}) => {
-//     console.log(data.results);
-//     this.api.updateMovieList(data.results);
-//   });
-// }
 }

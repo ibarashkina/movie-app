@@ -3,8 +3,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: top;
-    margin-top: 100px;
-    
     
 }
 .exitDetailDiv {
@@ -59,3 +57,22 @@ a:hover {
     margin-bottom: 30px;
 }
 
+img {
+    height: 500px;
+}
+
+#calendar {
+    color: rgb(104, 104, 146);
+}
+
+#timer {
+    color: pink;
+}
+
+#star {
+color: rgb(252, 220, 42);
+}
+
+#theaters {
+    color: rgb(117, 117, 117);
+}

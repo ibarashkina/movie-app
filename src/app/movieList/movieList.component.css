@@ -18,11 +18,11 @@
     position: relative;
     font-family: 'Roboto Condensed', sans-serif;
     background-color: black;        
-    /* border: solid 1px rgb(204, 199, 199); */
+    border: solid 1.5px rgb(204, 199, 199);
     font-size: 1.2rem;
     /* border-radius: 1px;         */
     /* border: solid 1px goldenrod; */
-    box-shadow: 0 4px 8px 0 rgba(248, 247, 247, 0.2), 0 1px 5px 0 rgba(248, 247, 247, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(248, 247, 247, 0.2), 0 1px 5px 0 rgba(248, 247, 247, 0.2); */
     color: rgb(204, 199, 199);    
 }
 
@@ -31,7 +31,10 @@
     top: 15.5em;
     right: 5px;
     cursor: pointer;
-   
+}
+
+#heartIcon:hover {
+    color: red;
 }
 
 .imageDiv {
@@ -71,10 +74,12 @@ img {
     left: 5px;
     /* background-color: lime; */
 }
+
 #starIcon{
     position: relative;
     top: .12em;
     font-size: 1em;
+    color: rgb(252, 220, 42);
     /* background-color: purple; */
 
 }
@@ -92,16 +97,21 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: 35px;
 
 }
 
 .page p {
-    color: goldenrod;
+    color: lightgray;
 }
+
 .arrows {
     color: #eeeeee;
     font-size: 2rem;
+}
+
+.arrows:hover {
+    color: goldenrod;
 }
