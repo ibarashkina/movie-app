@@ -1,4 +1,5 @@
 <div class="logo">WATCH LIST</div>
+<i class="fas fa-arrow-left" id="arrow" routerLink='/watch-list-page'></i>
 <div class="moviesDiv">  
   <div *ngFor="let movie of list" class="movieDiv" >
       <i id="heartIcon"class="material-icons red" (click)=" removeTask(movie)"[ngClass]="{'red': movie.favorite===true}">favorite_border</i>

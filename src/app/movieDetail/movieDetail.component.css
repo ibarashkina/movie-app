@@ -76,3 +76,10 @@ color: rgb(252, 220, 42);
 #theaters {
     color: rgb(117, 117, 117);
 }
+
+
+
+#arrow:hover {
+    transform: scale(1.5);
+    cursor:pointer;
+}

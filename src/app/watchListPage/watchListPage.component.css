@@ -114,3 +114,7 @@ div {
     #heartIcon:hover {
         transform: scale(1.5);
     }
+    #arrow:hover {
+        transform: scale(1.5);
+        cursor:pointer;
+    }
