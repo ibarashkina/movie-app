@@ -9,6 +9,7 @@
     background-color: black;
     align-items: center;
     padding: 15px;
+    width: 100%;
     /* box-shadow: 0 1px 0 0 rgba(247, 244, 244, 0.2), 0 6px 10px 0 rgba(247, 244, 244, 0.1); */
 }
 
@@ -17,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    width: 75%;
+    width: 68%;
 }
 
 .navbar-logo {
@@ -31,7 +32,124 @@
     padding: 0;
 
 }
-/* 
+
+
+.filters-container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    width: 310px;
+    /* margin: 0 50px; */
+
+}
+
+#filterbtn {
+    margin: 0px 10px;
+    padding: 0;
+    color:#eeeeee;
+    border: none;
+    background-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    /* width: 95px; */
+    /* height: 28px; */
+    /* box-shadow: 0 1px 15px 1px rgba(247, 244, 244, 0.2), 0 6px 10px 0 rgba(247, 244, 244, 0.2); */
+}
+
+#filterbtn:hover {
+    color: goldenrod;
+}
+
+#userIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 0;    
+    margin: 0;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+#ui {
+    background-color:black; 
+    border:none;
+    cursor:pointer;
+}
+
+i {
+    color:#eeeeee; 
+    font-size: 1.2rem;
+}
+
+.fa-heart:hover {
+    color: #ed361a;
+}
+
+input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #eeeeee;
+    font-size: 1.5rem;
+    background-color: black;
+    color: #eeeeee;
+    background-repeat: no-repeat;
+    padding: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    /* padding: 12px 20px 12px 20px; */
+    -webkit-transition: width 0.4s ease-out-in;
+    transition: width 0.4s ease-out-in;
+  }
+
+  .genreFilter {
+    background-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #eeeeee;
+    font-size: 1.1rem;
+    border: 2px solid #eeeeee;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    .section1 {
+        width: 70%;
+    }
+
+    .filters-container { 
+        width: 460px;
+    }
+
+    #filterbtn {
+        margin: 0px 20px;
+        color:#eeeeee;
+        font-size: 1.5rem;
+    }
+
+    #userIcons {
+        width: 28%;
+    }
+
+    
+    i {
+        font-size: 1.5rem;
+        padding: 0 2px;
+    }
+
+    input[type=text] {
+        width: 215px;
+        font-size: 1.5rem;
+      }
+
+      .genreFilter {
+        font-size: 1.5rem;
+        padding: 5px 20px;
+      }
+  }
+
+  /* 
 .filter {
     color:#eeeeee;
     background-color: black;
@@ -41,31 +159,6 @@
 
 } */
 
-.filters-container { 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-    /* width: 400px; */
-    /* margin: 0 50px; */
-
-}
-
-#filterbtn {
-     margin: 0px 10px;
-    /* width: 95px; */
-    /* height: 28px; */
-    color:#eeeeee;
-    border: none;
-    background-color: black;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.4rem;
-    /* box-shadow: 0 1px 15px 1px rgba(247, 244, 244, 0.2), 0 6px 10px 0 rgba(247, 244, 244, 0.2); */
-}
-
-#filterbtn:hover {
-    color: goldenrod;
-}
 
 /* .toggle-filterbtn{
     width: 100px;
@@ -97,64 +190,18 @@
     color: #eeeeee;
     font-size: .83em;
 } */
+
 /* .toggle-filterbtn {
     margin: auto;
 } */
-#userIcons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    right: 0;    
-    margin: 0;
-    width: 25%;
-    justify-content: flex-end;
-}
 
-#ui {
-    background-color:black; 
-    border:none;
-    cursor:pointer;
-}
-
-i {
-    color:#eeeeee; 
-    font-size: 1.4rem;
-}
-
-.fa-heart:hover {
-    color: red;
-}
 
 /* #fa-home {
     margin-top: 1px;
 } */
 
-input[type=text] {
-    width: 180px;
-    box-sizing: border-box;
-    border: 2px solid #eeeeee;
-    font-size: 1.5rem;
-    background-color: black;
-    color: #eeeeee;
-    background-repeat: no-repeat;
-    padding: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.4rem;
-    /* padding: 12px 20px 12px 20px; */
-    -webkit-transition: width 0.4s ease-out-in;
-    transition: width 0.4s ease-out-in;
-  }
+
 /*   
   input[type=text]:focus {
     width: 50px;
   } */
-
-
-  .genreFilter {
-    background-color: black;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #eeeeee;
-    font-size: 1.4rem;
-    border: 2px solid #eeeeee;
-    padding: 5px;
-  }

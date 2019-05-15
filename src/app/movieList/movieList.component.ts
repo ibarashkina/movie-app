@@ -47,6 +47,11 @@ export class movieListComponent implements OnInit {
    //  const list.movies =[]
     this.api.updateMovieList(this.list);
   }
+
+  scrollUp = () => {
+    window.scroll(0,0);
+
+  }
   
   ngOnInit() {
     this.api.movieList.subscribe(list => this.list = list);  
