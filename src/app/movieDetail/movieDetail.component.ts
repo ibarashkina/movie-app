@@ -53,7 +53,7 @@ export class MovieDetailComponent implements OnInit {
 exitTask= (movie) => {
   // this.red=!this.red;
   this.movie = !this.movie;
- //  const list.movies =[]
+//  const list.movies =[]
 //  this.api.updateMovieList(data.results);
 }
 

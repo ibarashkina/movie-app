@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { movieListComponent } from './movieList/movieList.component';
 import { watchListPageComponent } from './watchListPage/watchListPage.component';
-// import { nowPlayingComponent } from './nowPlayingList/nowPlayingList.component';
+import { nowPlayingComponent } from './nowPlayingList/nowPlayingList.component';
 import { popularListComponent } from './popularList/popularList.component';
 import { topRatedListComponent } from './topRatedList/topRatedList.component';
 import { AppComponent } from './app.component';
@@ -20,7 +20,7 @@ import { Api } from './services/api.service';
 const appRoutes: Routes = [
   {path: 'home/:page', component: movieListComponent, pathMatch: 'full' },
   {path: 'watch-list-page', component: watchListPageComponent},
-  // {path: 'now-playing-list', component: nowPlayingComponent},
+  {path: 'now-playing-list', component: nowPlayingComponent},
   {path: 'popular-list', component: popularListComponent},
   {path: 'top-rated-list', component: topRatedListComponent},
   {path: 'movie-detail/:id', component: MovieDetailComponent},  
@@ -34,7 +34,7 @@ const appRoutes: Routes = [
     watchListPageComponent,
     MovieDetailComponent,
     HeaderComponent,
-    // nowPlayingComponent,
+    nowPlayingComponent,
     popularListComponent, 
     topRatedListComponent,    
   ],
