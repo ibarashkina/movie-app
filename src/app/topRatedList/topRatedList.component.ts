@@ -54,12 +54,16 @@ export class topRatedListComponent implements OnInit {
      //  const list.movies =[]
       this.api.updateMovieList(this.list);
     }
+
+    scrollUp = () => {
+      window.scroll(0,0);
+    }
     
     ngOnInit() {
         this.api.movieList.subscribe(list => this.list = list);  
     
           this.route.params.subscribe(params => {
-            this.api.getTopRatedMovies().subscribe((data:ApiData) => {
+            this.api.getTopRatedMovies(params.page).subscribe((data:ApiData) => {
               this.movie = data;
               if (data.page === 1) {
                 data.showArrow = false; 

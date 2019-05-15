@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
 import { Api } from '../services/api.service';
+import { genreListComponent } from '../genreList/genreList.component';
 
 interface GenreData {
   genres: Genres[];
@@ -56,29 +57,34 @@ searchMovie = () => {
   });
 }
 
-getTopRatedMovies = () => {
-  this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
-    console.log(data.results);
-    this.api.updateMovieList(data.results);
-  });
-}
+// getTopRatedMovies = () => {
+//   this.api.getTopRatedMovies().subscribe((data: {results: []}) => {
+//     console.log(data.results);
+//     this.api.updateMovieList(data.results);
+//   });
+// }
 
-getNowPlayingMovies = () => {
-  this.api.getNowPlayingMovies().subscribe((data: {results: []}) => {
-    console.log(data.results);
-    this.api.updateMovieList(data.results);
-  });
-}
+// getNowPlayingMovies = () => {
+//   this.api.getNowPlayingMovies().subscribe((data: {results: []}) => {
+//     console.log(data.results);
+//     this.api.updateMovieList(data.results);
+//   });
+// }
 
-getPopularMovies = () => {
-  this.api.getPopularMovies().subscribe((data: {results: []}) => {
-    console.log(data.results);
-    this.api.updateMovieList(data.results);
-  });
-}
+// getPopularMovies = () => {
+//   this.api.getPopularMovies().subscribe((data: {results: []}) => {
+//     console.log(data.results);
+//     this.api.updateMovieList(data.results);
+//   });
+// }
 
 onChange = (event) => {
   this.api.getGenreList(this.genreId).subscribe((data: {results: []}) => this.api.updateMovieList(data.results));
+  console.log(this.genreId);
+}
+
+onClick = () => {
+  this.genreId = 0;
   console.log(this.genreId);
 }
 
