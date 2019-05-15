@@ -47,7 +47,14 @@ export class MovieDetailComponent implements OnInit {
       this.api.getMovieDetail(params.id).subscribe((data: ApiData) => {
         this.movie = data;
       });
-    })
+  })
+}
 
-  }
+exitTask= (movie) => {
+  // this.red=!this.red;
+  this.movie = !this.movie;
+ //  const list.movies =[]
+//  this.api.updateMovieList(data.results);
+}
+
 }

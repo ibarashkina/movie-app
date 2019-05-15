@@ -1,0 +1,22 @@
+<div class="logo">Popular Movies</div>
+<div class="moviesDiv" *ngIf="movie">
+        <div class="movieDiv" *ngFor="let movie of list">
+            <p class="voteAverage"><i id="starIcon" class="material-icons">star</i>{{movie.vote_average}}</p>
+            <i id="heartIcon" class="material-icons red" (click)=" addWatchList(movie)" [ngClass]="{'red': movie.favorite===true}">favorite_border</i>
+            <div class="imageDiv"><img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}"  class="img-fluid" alt="{{ movie.title }}"></div>
+            <div class="textDiv">
+                <a [routerLink]="['/movie-detail', movie.id]" class="movieTitle">{{ movie.title }}</a>
+            </div>
+        </div>
+      </div>
+      <div class="page" *ngIf="movie">
+          <a name="arrows" class="arrows" [routerLink]="['/home', movie.page - 1]" *ngIf="movie.showArrow">
+            <i class="material-icons">keyboard_arrow_left</i>
+          </a>
+        <p>{{movie.page}}</p>
+        <a class="arrows" [routerLink]="['/home', movie.page + 1]">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </div>
+      <p class="errorMsg">{{ errorMessage }}</p>
+      
