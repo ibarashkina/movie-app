@@ -17,34 +17,18 @@ getMoviePage = (page:number) => {
     const pageUrl = `https://api.themoviedb.org/3/discover/movie?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`;
     return this.http.get(pageUrl); 
 };
-// Checkbox: <input type="checkbox" id="myCheck"  onclick="myFunction()">
-
-// <p id="text" style="display:none">Checkbox is CHECKED!</p>
-
-// <script>
-// function myFunction() {
-//   var checkBox = document.getElementById("myCheck");
-//   var text = document.getElementById("text");
-//   if (checkBox.checked == true){
-//     text.style.display = "block";
-//   } else {
-//      text.style.display = "none";
-//   }
-// }
 
 getMovieDetail = (movieId:number) => { 
     const detailUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=ccf98653c165e83729605d20546c01d7&language=en-US`
     return this.http.get(detailUrl); 
 }
 
-
 searchMovie = (moviestr) => {
     if (!moviestr) {
         return this.getMovie();
     }
     const searchApi = `https://api.themoviedb.org/3/search/movie?query=${moviestr}&include_adult=false&page=1&language=en-US&api_key=ccf98653c165e83729605d20546c01d7`;
-     return this.http.get(searchApi); 
-  
+     return this.http.get(searchApi);  
   }
 
   getTopRatedMovies() {
@@ -71,5 +55,4 @@ searchMovie = (moviestr) => {
       const genreUrl = `https://api.themoviedb.org/3/discover/movie?api_key=ccf98653c165e83729605d20546c01d7&language=en-US&with_genres=${genreId}`;
       return this.http.get(genreUrl);
   }
-
 }
